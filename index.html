@@ -1,8 +1,61 @@
 <html style="overflow:hidden;"><head><title>MARKO ON MESTARI</title></head>
 <body bgcolor="black" text="white">
-<div align="center"><marquee width="200"><p color="white"><h1>MARKO ON MIES</h1></p></marquee></div>
-<div align="center"><img src="marko1.gif" alt=make"></div>
+<section class="wrapper">
+  <marquee class="title" width="200"><p color="white"><h1>MARKO ON MIES! 31 VUOTTA HUHHUH MIKÄ MESTARI! VOIHAN ALBATROSSI SENTÄÄN NIIN SE AIKA VAAN KULUU!</h1></p></marquee>
+  <img class ="giffi" src="marko1.gif" alt=make">
+  <button class="pause" onclick="togglePlay()">▶️ Paina</button>
+  <div class="player">
+    <audio class="audio" src="bday.mp3" autoplay type="audio" loop="true"></audio>
+  </div>
+</section>
 
-<audio style="position:absolute; top:-100px;" src="bday.mp3" autoplay controls ></audio>
-</body
+<script>
+var pause = document.querySelector(".pause");
+var audio = document.querySelector(".audio");
+
+function togglePlay() {
+	if (audio.paused) {
+		audio.play();
+    pause.innerHTML = "kiitos riittää";
+	} else {
+		audio.pause();
+		pause.style.color = " #848484";
+    pause.innerHTML = "▶️ 😍";
+	}
+}
+</script>
+<style>
+
+.wrapper{
+display: flex;
+flex-direction: column;
+width: 100vw;
+align-content: center;
+align:center;
+}
+.pause {
+ font-size: 2rem;
+ width: 50%;
+ min-height: 5rem;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+
+.giffi {
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.title {
+width: 25%;
+margin-left: auto;
+margin-right: auto;
+}
+
+</style>
+
+</body>
 </html>
